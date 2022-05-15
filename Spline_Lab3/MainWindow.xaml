@@ -1,0 +1,38 @@
+﻿<Window x:Name="InterfaceWindow" x:Class="Spline_Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spline_Lab3"
+        mc:Ignorable="d"
+        Title="Аффинные геометрические преобразования" Height="878" Width="1066" Loaded="InterfaceWindow_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640*"/>
+            <ColumnDefinition Width="350*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="DrawCanvas" MouseLeftButtonDown="DrawCanvas_MouseLeftButtonDown"  Background="White"  Grid.Column="0">
+            <Polyline x:Name="PinkLine" Stroke="DeepPink" StrokeThickness="2"></Polyline>
+            <Polyline x:Name="BlueLine" Stroke="Aqua" StrokeThickness="2"></Polyline>
+        </Canvas>
+        <Button x:Name="TransportBtn" Content="Вектор" Grid.Column="1" HorizontalAlignment="Left" Margin="12,16,0,0" VerticalAlignment="Top" Width="128" Height="47" FontSize="18" Click="TransportBtn_Click"/>
+        <TextBox x:Name="CoordoutTB" Grid.Column="1" HorizontalAlignment="Left" Height="257" Margin="10,571,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" FontSize="18"/>
+        <TextBox x:Name="X_TB" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="184,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="18"/>
+        <TextBox x:Name="Y_TB" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="287,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="18"/>
+        <TextBox x:Name="UserMatrixTB" HorizontalAlignment="Left" Height="134" Margin="12,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" FontSize="18" Grid.Column="1"/>
+        <Button x:Name="ScaleBtn" Content="Масштаб" Grid.Column="1" HorizontalAlignment="Left" Margin="12,91,0,0" VerticalAlignment="Top" Width="128" Height="47" FontSize="18" Click="ScaleBtn_Click"/>
+        <TextBox x:Name="scaleX_TB" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="184,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="18"/>
+        <TextBox x:Name="scaleY_TB" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="287,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="18"/>
+        <Button x:Name="ClearAllBtn" Content="Очистить все" Grid.Column="1" HorizontalAlignment="Left" Margin="12,305,0,0" VerticalAlignment="Top" Width="238" Height="47" FontSize="18" Click="ClearAllBtn_Click"/>
+        <Button x:Name="RotateBtn" Content="Поворот" Grid.Column="1" HorizontalAlignment="Left" Margin="12,162,0,0" VerticalAlignment="Top" Width="130" Height="47" FontSize="18" Click="RotateBtn_Click"/>
+        <TextBox x:Name="RotateTB" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="184,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" FontSize="18"/>
+        <Label Content="Матрица преобразования:" HorizontalAlignment="Left" Margin="5,367,0,0" VerticalAlignment="Top" FontSize="18" Grid.Column="1"/>
+        <Button x:Name="ResetMatrixBtn" Content="Сбросить преобразования" Grid.Column="1" HorizontalAlignment="Left" Margin="12,236,0,0" VerticalAlignment="Top" Width="238" Height="47" FontSize="18" Click="ResetMatrixBtn_Click"/>
+        <Label Content="Y:" Grid.Column="1" HorizontalAlignment="Left" Margin="265,23,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="3.4,1.765"/>
+        <Label Content="X:" Grid.Column="1" HorizontalAlignment="Left" Margin="159,23,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="1,-1.118"/>
+        <Label Content="Y:" Grid.Column="1" HorizontalAlignment="Left" Margin="265,98,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="3.4,1.765"/>
+        <Label Content="X:" Grid.Column="1" HorizontalAlignment="Left" Margin="159,98,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="1,-1.118"/>
+        <Label Content="Координаты текущей линии :" Grid.Column="1" HorizontalAlignment="Left" Margin="5,536,0,0" VerticalAlignment="Top" FontSize="18"/>
+
+    </Grid>
+</Window>
